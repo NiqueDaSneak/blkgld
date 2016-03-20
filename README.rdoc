@@ -1,28 +1,15 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Steps to build:
 
-Things you may want to cover:
+1. Make schema for database
+2. Build migrations for classes
+	2a. Classes: Businesses, Users, Comments, Favorites
+3. Build out controllers to views
+4. Transfer data to specific views via controller
+5. Implement search
+6. Implement favorites, bind data to controllers for use in views
+Misc: Style as necessary.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+UX Flow:
+	On initial page load, splash page appears to provide options for log in/sign up. After authentication for a business you will be taken to the edit business page. For users, it will find their location and pull up businesses that are within a specific distance by default. Search option is available as a tool in the tool bar. New menu will run at the bottom of the screen like instagram. Functions along the bottom will include; search, calender, list of favorites and social media tab. 
