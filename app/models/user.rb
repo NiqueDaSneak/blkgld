@@ -1,5 +1,3 @@
-require 'bcrypt'
-
 class User < ActiveRecord::Base
 	before_create :check_params
 
@@ -10,7 +8,7 @@ class User < ActiveRecord::Base
 
 
 	validates :username, presence: true, uniqueness: true
-	validates :email, email: true, uniqueness: true
+  	validates :email, uniqueness: true
 
 	has_secure_password
 

@@ -4,7 +4,7 @@ class CreateBusinesses < ActiveRecord::Migration
 
 			t.string :business_name, null: false
 			t.string :email, null: false
-			t.string :pasword_digest, null: false
+			t.string :password_digest, null: false
 			t.string :street_address, null: false
 			t.string :city, null: false
 			t.string :state, null: false

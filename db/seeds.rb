@@ -7,4 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-yogabar = Business.new(business_name: "The Yoga Bar", email: "email@email.com", password: "password", street_address: "15 W 14th Street", city: "Cincinnati", state: "OH", url: "www.theyogabars.com")
+Business.create(business_name: "The Yoga Bar", email: "email@email.com", password: "password", street_address: "15 W 14th Street", city: "Cincinnati", state: "OH", url: "www.theyogabars.com")
+
+User.create(username: "user1", email: "user1@email.com", password:"password")
+
+greeting = "Hey there!"

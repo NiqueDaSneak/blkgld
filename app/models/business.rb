@@ -1,5 +1,3 @@
-require 'bcrypt'
-
 class Business < ActiveRecord::Base
 	before_create :check_params
 
@@ -9,7 +7,7 @@ class Business < ActiveRecord::Base
 
 
 	validates :business_name, presence: true, uniqueness: true
-	validates :email, uniqueness: true
+  	validates :email, uniqueness: true
 
 	has_secure_password
 
