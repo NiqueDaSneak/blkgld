@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+yogabar = Business.new(business_name: "The Yoga Bar", email: "email@email.com", password: "password", street_address: "15 W 14th Street", city: "Cincinnati", state: "OH", url: "www.theyogabars.com")
