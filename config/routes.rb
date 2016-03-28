@@ -1,4 +1,42 @@
 Rails.application.routes.draw do
+  get 'ratings/create'
+
+  get 'ratings/show'
+
+  get 'favorites/create'
+
+  get 'favorites/show'
+
+  get 'comments/new'
+
+  get 'comments/create'
+
+  get 'comments/show'
+
+  get 'users/new'
+
+  get 'users/create'
+
+  get 'users/show'
+
+  get 'users/edit'
+
+  get 'users/update'
+
+  get 'users/destroy'
+
+  get 'businesses/new'
+
+  get 'businesses/create'
+
+  get 'businesses/show'
+
+  get 'businesses/edit'
+
+  get 'businesses/update'
+
+  get 'businesses/destroy'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
