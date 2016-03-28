@@ -2,9 +2,9 @@
 
 Steps to build:
 
-1. Make schema for database
-2. Build migrations for classes
-	2a. Classes: Businesses, Users, Comments, Favorites
+DONE 1. Make schema for database 
+DONE 2. Build migrations for classes
+		2a. Classes: Businesses, Users, Comments, Favorites
 3. Build out controllers to views
 4. Transfer data to specific views via controller
 5. Implement search
