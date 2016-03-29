@@ -1,3 +1,36 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+html, body {
+	margin: 0;
+	text-align: center;
+}
+
+.landing-container {
+	background: image-url("landing-background.JPG");
+	background-repeat: no-repeat;
+	background-position: 63% 40%;
+	height: 100vh;
+}
+
+.landing-logo {
+	display: block;
+	margin: 0 auto;
+	width: 60%;
+	padding-top: 100px;
+	margin-bottom: 160px;
+}
+
+.email-login-button {
+	background-color: #FFAA00;
+	text-decoration: none;
+	display: inline;
+	border-radius: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 40px;
+	padding-left: 40px;
+	color: white;
+	font-size: 12pt;
+}	
