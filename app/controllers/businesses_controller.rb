@@ -1,16 +1,40 @@
 class BusinessesController < ApplicationController
   def new
+    @business = Business.new
   end
 
   def create
+    @business = Business.new(business_params)
+    binding.pry
+      if @business.save
+        session[:business_id] = @business.id
+        redirect_to businesses_profile_path
+      else
+        redirect_to businesses_new_path, :flash => {:error => @business.errors.full_messages}
+      end
+  end
+
+  def find
+    @business = Business.find_by(email: params[:email].downcase)
+    if @business && @business.authenticate(params[:password])
+      session[:business_id] = @business.id
+      redirect_to businesses_profile_path
+    else
+      redirect_to businesses_login_path, :flash => {:error => "Make sure all required fields are filled in."}
+    end
   end
 
   def login
   end
 
   def show
-    binding.pry
+    # binding.pry
     @user = User.find_by(id: current_user.id)
+  end
+
+  def profile
+    # binding.pry
+    @business = Business.find_by(id: current_business.id)
   end
 
   def edit
@@ -20,5 +44,11 @@ class BusinessesController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+
+  def business_params
+    business_params = params.require(:business).permit(:business_name, :email, :password, :street_address, :city, :state, :url)
   end
 end
