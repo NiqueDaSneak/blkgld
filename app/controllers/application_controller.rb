@@ -11,5 +11,13 @@ class ApplicationController < ActionController::Base
   	!!current_user
   end
 
+  def current_business
+    @current_business ||= Business.find_by(id: session[:business_id]) if session[:business_id]
+  end
+
+  def business_logged_in?
+    !!current_business
+  end
+
   helper_method :current_user, :user_logged_in?
 end
