@@ -21,13 +21,13 @@ html, body {
 	margin: 0 auto;
 	width: 90%;
 	padding-top: 50px;
-	margin-bottom: 160px;
+	margin-bottom: 70px;
 }
 
-.email-login-button {
+.email-signup-button {
 	background-color: #FFAA00;
 	text-decoration: none;
-	display: inline;
+	display: block;
 	border-radius: 10px;
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -35,7 +35,25 @@ html, body {
 	padding-left: 40px;
 	color: white;
 	font-size: 16pt;
+	margin-bottom: 30px;
+	margin-left: 5vh; 
+	margin-right: 5vh;
 }	
+
+.email-login-button {
+	background-color: #FFAA00;
+	text-decoration: none;
+	display: block;
+	border-radius: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 40px;
+	padding-left: 40px;
+	color: white;
+	font-size: 16pt;
+	margin-left: 5vh; 
+	margin-right: 5vh; 
+}
 
 
 
@@ -45,18 +63,18 @@ html, body {
 and (min-width : 780px) {
 
 	.landing-container {
-	background: image-url("landing-background.JPG");
-	background-repeat: no-repeat;
-	background-position: 63% 40%;
-	height: 100vh;
-}
+		background: image-url("landing-background.JPG");
+		background-repeat: no-repeat;
+		background-position: 63% 40%;
+		height: 100vh;
+	}
 
-.landing-logo {
-	display: block;
-	margin: 0 auto;
-	width: 30%;
-	padding-top: 50px;
-	margin-bottom: 160px;
-}
+	.landing-logo {
+		display: block;
+		margin: 0 auto;
+		width: 30%;
+		padding-top: 50px;
+		margin-bottom: 160px;
+	}
 
 }
