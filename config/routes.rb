@@ -40,6 +40,8 @@ Rails.application.routes.draw do
 
   post 'businesses/create'
 
+  get 'businesses/profile'
+
   get 'businesses/show'
 
   get 'businesses/edit'
