@@ -1,1 +1,12 @@
-login.html.erb
+<p><%= flash[:error] %></p>
+
+<%= form_tag('/businesses/find') %>
+<div>
+	<%= text_field_tag 'email', nil, :placeholder => "Email", :required => true  %>
+</div>
+<div>
+	<%= password_field_tag 'password', nil, :placeholder => "Password", :required => true  %>
+</div>
+<div>
+	<%= submit_tag "Log In" %>
+</div>
