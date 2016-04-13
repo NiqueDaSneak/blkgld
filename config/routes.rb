@@ -1,23 +1,28 @@
 Rails.application.routes.draw do
+
   get 'welcome/index'
 
   get 'ratings/create'
 
   get 'ratings/show'
 
-  get 'favorites/create'
+  post 'favorites/create'
 
   get 'favorites/show'
 
   get 'comments/new'
 
-  get 'comments/create'
+  post 'comments/create'
 
   get 'comments/show'
 
   get 'users/new'
 
-  get 'users/create'
+  get 'users/login'
+
+  post 'users/find'
+
+  post 'users/create'
 
   get 'users/show'
 
@@ -29,7 +34,11 @@ Rails.application.routes.draw do
 
   get 'businesses/new'
 
-  get 'businesses/create'
+  get 'businesses/login'
+
+  post 'businesses/find'
+
+  post 'businesses/create'
 
   get 'businesses/show'
 
@@ -38,6 +47,9 @@ Rails.application.routes.draw do
   get 'businesses/update'
 
   get 'businesses/destroy'
+
+  get 'logout' => 'sessions#logout', as: :logout
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
