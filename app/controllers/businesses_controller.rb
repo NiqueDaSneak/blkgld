@@ -28,12 +28,12 @@ class BusinessesController < ApplicationController
   end
 
   def show
-    # binding.pry
     @user = User.find_by(id: current_user.id)
+    @businesses = Business.all
+    # binding.pry
   end
 
   def profile
-    # binding.pry
     @business = Business.find_by(id: current_business.id)
   end
 
