@@ -9,8 +9,9 @@ html, body {
 }
 
 .landing-container {
-	background: image-url("landing-background.JPG");
+	background: url("landing-background.JPG");
 	background-repeat: no-repeat;
+	background-size: cover; 
 	background-position: 63% 40%;
 	height: 100vh;
 }
