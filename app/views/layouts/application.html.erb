@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>BlkGld</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+	<title>BlkGld</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
 </head>
-<body>
+<body class="pushmenu-push">
+	<nav class="pushmenu pushmenu-left">
+		<h3>Menu</h3>
+		<a href="#">Home</a>
+		<a href="#">Nav2</a>
+		<a href="#">Nav3</a>
+		<a href="#">Nav4</a>
+		<a href="#">Nav5</a>
+		<a href="#">Nav6</a>
+		<% if user_logged_in? %>
+		<a href="<%= logout_path %>">Log Out</a>
+		<% end %>
+		<% if business_logged_in? %>
+		<a href="<%= logout_path %>">Log Out</a>
+		<% end %>
+	</nav>
 
-<%= yield %>
+	<div class="buttonset">
+		<%= image_tag('hamburger.png', :class => "open-menu") %>
+		<%= image_tag('close-vector.png', :class => "close-menu") %>
+		<% if user_logged_in? %>	
+		<%= image_tag('search-vector.png', :class => "search-vector") %>
+		<% end %>
+	</div>
+	
+	<%= yield %>
 
 </body>
 </html>

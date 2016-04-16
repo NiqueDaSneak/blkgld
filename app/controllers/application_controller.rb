@@ -19,5 +19,5 @@ class ApplicationController < ActionController::Base
     !!current_business
   end
 
-  helper_method :current_user, :user_logged_in?
+  helper_method :current_user, :user_logged_in?, :current_business, :business_logged_in?
 end
