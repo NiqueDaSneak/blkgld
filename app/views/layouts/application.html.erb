@@ -27,6 +27,9 @@
 	<div class="buttonset">
 		<%= image_tag('hamburger.png', :class => "open-menu") %>
 		<%= image_tag('close-vector.png', :class => "close-menu") %>
+		<% if user_logged_in? %>	
+		<%= image_tag('search-vector.png', :class => "search-vector") %>
+		<% end %>
 	</div>
 	
 	<%= yield %>

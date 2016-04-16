@@ -87,12 +87,6 @@ nav-list.active {
 	/*padding: 15px 20px 20px;*/
 }
 
-section.content {
-	font-family: Arial, Helvetica, sans-serif;
-	padding: 10px 20px;
-}
-
-
 
 .open-menu {
 	width: 8.5vh;
@@ -104,5 +98,11 @@ section.content {
 
 .close-menu {
 	width: 6.5vh;
+	margin: 15px;
+}
+
+.search-vector {
+	width: 6.5vh;
+	float: right;
 	margin: 15px;
 }
