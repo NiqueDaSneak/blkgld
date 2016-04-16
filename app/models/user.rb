@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
 	before_create :check_params
+	mount_uploader :avatar, AvatarUploader
 
 
 	has_many :comments

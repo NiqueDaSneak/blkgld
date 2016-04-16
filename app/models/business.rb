@@ -1,5 +1,7 @@
 class Business < ActiveRecord::Base
 	before_create :check_params
+	mount_uploader :avatar, AvatarUploader
+
 
 	has_many :comments
 	has_many :favorites
@@ -7,7 +9,7 @@ class Business < ActiveRecord::Base
 
 
 	validates :business_name, presence: true, uniqueness: true
-  	validates :email, uniqueness: true
+	validates :email, uniqueness: true
 
 	has_secure_password
 
