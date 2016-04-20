@@ -28,8 +28,8 @@ class BusinessesController < ApplicationController
 
   def show
     @user = User.find_by(id: current_user.id)
+    @near_biz = Business.near([session[:latitude], session[:longitude]], 10)
     @businesses = Business.all
-    # binding.pry
   end
 
   def profile
