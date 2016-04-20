@@ -1,6 +1,8 @@
 class Business < ActiveRecord::Base
 	before_create :check_params
 	mount_uploader :avatar, AvatarUploader
+	geocoded_by :full_address
+	after_validation :geocode
 
 
 	has_many :comments
@@ -18,7 +20,7 @@ class Business < ActiveRecord::Base
 	end
 
 	def full_address
-		return "#{self.}"
+		return "#{self.street_address} " + "#{self.city} " + "#{self.state} " + "#{self.zip_code}"
 	end
 
 	def average_rating

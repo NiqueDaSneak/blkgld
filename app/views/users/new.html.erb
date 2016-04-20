@@ -2,7 +2,7 @@
 
 <%= form_for @user, url: users_create_path(@user), html: { method: :post } do |f| %>
 <div>
-	<%= f.text_field :email, :placeholder => "Email", :required => true %>
+	<%= f.text_field :email, :placeholder => "Email", :type => 'email', :required => true %>
 </div>
 <div>
 	<%= f.text_field :username, :placeholder => "Username", :required => true %>

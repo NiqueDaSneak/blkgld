@@ -33,6 +33,7 @@ gem "mini_magick"
 # geokit for location features
 gem 'geokit'
 gem 'geokit-rails'
+gem 'geocoder'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
