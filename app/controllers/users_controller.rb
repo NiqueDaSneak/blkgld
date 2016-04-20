@@ -13,7 +13,6 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       session[:latitude] = params[:latitude]
       session[:longitude] = params[:longitude]
-    binding.pry
       redirect_to businesses_show_path
     else
       redirect_to users_login_path, :flash => {:error => "Password/Email Combination Incorrect"}

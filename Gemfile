@@ -30,9 +30,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'carrierwave'
 gem "mini_magick"
 
-# geokit for location features
-gem 'geokit'
-gem 'geokit-rails'
+# geocoder for location features
 gem 'geocoder'
 
 # Use Unicorn as the app server
