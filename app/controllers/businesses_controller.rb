@@ -5,7 +5,6 @@ class BusinessesController < ApplicationController
 
   def create
     @business = Business.new(business_params)
-    binding.pry
       if @business.save
         session[:business_id] = @business.id
         redirect_to businesses_profile_path
@@ -49,6 +48,6 @@ class BusinessesController < ApplicationController
   private
 
   def business_params
-    business_params = params.require(:business).permit(:business_name, :email, :password, :street_address, :city, :state, :url, :avatar)
+    business_params = params.require(:business).permit(:business_name, :email, :password, :street_address, :city, :state, :url, :avatar, :zip_code)
   end
 end
