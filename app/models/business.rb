@@ -17,6 +17,10 @@ class Business < ActiveRecord::Base
 		self.email.downcase
 	end
 
+	def full_address
+		return "#{self.}"
+	end
+
 	def average_rating
 		
 	end

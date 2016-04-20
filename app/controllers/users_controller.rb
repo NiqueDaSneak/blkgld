@@ -11,6 +11,9 @@ class UsersController < ApplicationController
     @user = User.find_by(email: params[:email].downcase)
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
+      session[:latitude] = params[:latitude]
+      session[:longitude] = params[:longitude]
+    binding.pry
       redirect_to businesses_show_path
     else
       redirect_to users_login_path, :flash => {:error => "Password/Email Combination Incorrect"}
@@ -21,7 +24,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      # binding.pry
+      session[:latitude] = params[:user][:latitude]
+      session[:longitude] = params[:user][:longitude]
       redirect_to businesses_show_path
     else
       redirect_to users_new_path, :flash => {:error => "Make sure all required fields are filled in."}

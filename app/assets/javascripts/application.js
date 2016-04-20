@@ -15,11 +15,11 @@
 //= require_tree .
 
 
-$(document).ready(function() {
-	$menuLeft = $('.pushmenu-left');
-		$open_nav = $('.open-menu');
-		$close_nav = $('.close-menu')
+// $(document).ready(function() {
+// 	$menuLeft = $('.pushmenu-left');
+// 		$open_nav = $('.open-menu');
+// 		$close_nav = $('.close-menu')
 		
 
-		$close_nav.css('display', 'none');
-});
+// 		$close_nav.css('display', 'none');
+// });

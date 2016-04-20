@@ -1,4 +1,5 @@
 	$(document).ready(function() {
+
 $menuLeft = $('.pushmenu-left');
 		$open_nav = $('.open-menu');
 		$close_nav = $('.close-menu')
