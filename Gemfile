@@ -28,8 +28,11 @@ gem 'bcrypt', '~> 3.1.7'
 
 # carrierwave for avatar upload for businesses
 gem 'carrierwave'
-
 gem "mini_magick"
+
+# geokit for location features
+gem 'geokit'
+gem 'geokit-rails'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
