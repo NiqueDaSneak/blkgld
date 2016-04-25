@@ -6,6 +6,7 @@
 
 html, body {
 	margin: 0;
+	height: 100%;
 }
 
 .landing-container {
@@ -19,9 +20,9 @@ html, body {
 .landing-logo {
 	display: block;
 	margin: 0 auto;
-	width: 90%;
-	padding-top: 50px;
-	margin-bottom: 40px;
+	width: 65%;
+	padding-top: 150px;
+	margin-bottom: 70px;
 }
 
 .email-signup-button {
@@ -35,9 +36,9 @@ html, body {
 	padding-left: 40px;
 	color: white;
 	font-size: 15pt;
-	margin-bottom: 30px;
-	margin-left: 5vh; 
-	margin-right: 5vh;
+	margin-bottom: 40px;
+	margin-left: 10vh; 
+	margin-right: 10vh;
 	text-align: center;
 }	
 
