@@ -1,3 +1,79 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.forms-container {
+	/*padding-top: 20vh;*/
+  background: url("landing-background.JPG");
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-position: 63% 40%;
+  /*height: 100vh;*/
+}
+
+.signup-form, .biz {
+  padding-top: 14vh; 
+}
+
+
+.signup-form, .login-form, .biz-signup-form {
+	text-align: center; 
+	padding-bottom: 5vh;
+}
+
+#user_email, #user_username, #user_password, #password, #email {
+}
+
+.input-field {
+  text-align: center;
+  margin-bottom: 10px;
+  width: 40vh;
+  height: 4vh;
+  font-size: 2.6vh;
+  border-radius: 4pt;
+  border-style: solid;
+  border-color: #FFAA00;
+  background-color: rgba(0, 0, 0, 0.5)
+
+}
+
+::-webkit-input-placeholder {
+  color: #FFAA00;
+}
+:-moz-placeholder {
+  color: #FFAA00;
+}
+::-moz-placeholder {
+  color: #FFAA00;
+}
+:-ms-input-placeholder {
+  color: #FFAA00;
+}
+
+input:focus {
+ color: #FFAA00;
+}
+
+.auth-header {
+  color: #FFAA00;
+  font-size: 3vh;
+}
+
+.auth-button {
+  border-style: none;
+  background-color: #FFAA00;
+  text-decoration: none;
+  /*display: block;*/
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 40px;
+  padding-left: 40px;
+  color: white;
+  font-size: 15pt;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10vh; 
+  margin-right: 10vh;
+  text-align: center;
+}

@@ -1,22 +1,50 @@
-<p><%= flash[:error] %></p>
+<div class="forms-container">
+	<div class="signup-form">
+		<p class="auth-header">New User Sign Up Here</p>
+		<p class="auth-header"><%= flash[:error] %></p>
 
-<%= form_for @user, url: users_create_path(@user), html: { method: :post } do |f| %>
-<div>
-	<%= f.text_field :email, :placeholder => "Email", :type => 'email', :required => true %>
+		<%= form_for @user, url: users_create_path(@user), html: { method: :post } do |f| %>
+		<div>
+			<%= f.text_field :email, :placeholder => "Email", :type => 'email', :required => true, :class => 'input-field' %>
+		</div>
+		<div>
+			<%= f.text_field :username, :placeholder => "Username", :required => true, :class => 'input-field' %>
+		</div>
+		<div>
+			<%= f.password_field :password, :placeholder => "Password", :required => true, :class => 'input-field' %>
+		</div>
+		<div>
+			<%= f.hidden_field :latitude, :placeholder => "Latitude", :class => 'latitude', :value => params[:latitude] %>
+		</div>
+		<div>
+			<%= f.hidden_field :longitude, :placeholder => "Longitude", :class => 'longitude', :value => params[:logitude] %>
+		</div>
+		<div>
+			<%= f.submit "Sign Up", :class => 'auth-button'  %>
+		</div>
+		<% end %>
+	</div>
+
+	<div class="login-form">
+		<p class="auth-header">Existing User Log In</p>
+
+		<p class="auth-header"><%= flash[:error] %></p>
+
+		<%= form_tag('/users/find') %>
+		<div>
+			<%= text_field_tag 'email', nil, :placeholder => "Email", :type => 'email', :required => true, :class => 'input-field' %>
+		</div>
+		<div>
+			<%= password_field_tag 'password', nil, :placeholder => "Password", :required => true, :class => 'input-field' %>
+		</div>
+		<div>
+			<%= hidden_field_tag 'latitude', nil, :placeholder => "Latitude", :class => 'latitude' %>
+		</div>
+		<div>
+			<%= hidden_field_tag 'longitude', nil, :placeholder => "Longitude", :class => 'longitude' %>
+		</div>
+		<div>
+			<%= submit_tag "Log In", :class => 'auth-button' %>
+		</div>
+	</div>
 </div>
-<div>
-	<%= f.text_field :username, :placeholder => "Username", :required => true %>
-</div>
-<div>
-	<%= f.password_field :password, :placeholder => "Password", :required => true %>
-</div>
-<div>
-	<%= f.hidden_field :latitude, :placeholder => "Latitude", :class => 'latitude', :value => params[:latitude] %>
-</div>
-<div>
-	<%= f.hidden_field :longitude, :placeholder => "Longitude", :class => 'longitude', :value => params[:logitude] %>
-</div>
-<div>
-	<%= f.submit "Sign Up" %>
-</div>
-<% end %>
