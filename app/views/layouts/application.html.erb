@@ -11,16 +11,13 @@
 <body class="pushmenu-push">
 	<nav class="pushmenu pushmenu-left">
 		<h3>Menu</h3>
+		<% if user_logged_in? == false && business_logged_in? == false %>
 		<a href="<%= root_path %>">Home</a>
-		<a href="#">Nav2</a>
-		<a href="#">Nav3</a>
-		<a href="#">Nav4</a>
-		<a href="#">Nav5</a>
-		<a href="#">Nav6</a>
-		<% if user_logged_in? %>
-		<a href="<%= logout_path %>">Log Out</a>
 		<% end %>
-		<% if business_logged_in? %>
+		<a href="<%=  %>">Businesses</a>
+		<a href="#">Events</a>
+		<a href="#">Social Media</a>
+		<% if user_logged_in? || business_logged_in? %>
 		<a href="<%= logout_path %>">Log Out</a>
 		<% end %>
 	</nav>
