@@ -14,10 +14,11 @@
 		<% if user_logged_in? == false && business_logged_in? == false %>
 		<a href="<%= root_path %>">Home</a>
 		<% end %>
-		<a href="<%=  %>">Businesses</a>
-		<a href="#">Events</a>
-		<a href="#">Social Media</a>
-		<% if user_logged_in? || business_logged_in? %>
+
+		<% if user_logged_in? == true || business_logged_in? == true %>
+		<a href="<%= businesses_show_path %>">Businesses</a>
+		<a href="<%= events_path %>">Events</a>
+		<a href="<%= social_path %>">Social Media</a>
 		<a href="<%= logout_path %>">Log Out</a>
 		<% end %>
 	</nav>
