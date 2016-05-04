@@ -1,3 +1,91 @@
 // Place all the styles related to the Businesses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.near-biz-container {
+  background: url("landing-background.JPG");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; 
+  background-position: 63% 40%;
+  position: relative;
+  /*height: 100%;*/
+  /*margin:0 auto;*/
+  /*text-align: center;*/
+  padding-bottom: 30px;
+}
+
+.show-header {
+  padding-top: 15.8vh;
+  text-align: center;
+  color: white;
+}
+
+.hor-rule {
+  width: 75%;
+  border: 0;
+  height: 2px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #FFAA00 , rgba(0, 0, 0, 0));
+  margin-top: 15px;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.75);
+}
+
+.biz-avatar {
+  width: 13vh;
+}
+
+.business-name {
+  font-size: 6vh;
+  padding-bottom: 8px;
+}
+
+.individual-biz {
+  text-align: center;
+  margin-top: 4.5vh;
+  /*margin-bottom: 2vh;*/
+  margin-left: 5vh;
+  margin-right: 5vh;
+  color: white;
+  /*display: inline;*/
+  /*align-items: center;*/
+  padding-top:1vh;
+  padding-bottom:1vh; 
+  background-color: #545454;
+  /*width: 30vh;*/
+  -webkit-box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.75);
+}
+
+.file-uploader {
+  color: #FFAA00;
+  font-size: 2.6vh;
+}
+
+.tag-name {
+  background-color: #FFAA00;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.tag-holder {
+  margin-top: 20px;
+}
+
+.business-distance {
+  margin-bottom: 10px;
+
+}
+.business-url {
+  margin-bottom: 100px;
+  font-size: 3vh;
+  text-decoration: none;
+  color: #FFAA00;
+}
+
+.timeline-Widget {
+  padding-top: 70px;
+}
