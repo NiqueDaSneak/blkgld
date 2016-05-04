@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
 	has_many :comments
 	has_many :favorites
 	has_many :ratings
+	has_many :tags
 
 
 	validates :username, presence: true, uniqueness: true
