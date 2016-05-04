@@ -1,7 +1,26 @@
-<h1>Businesses#show</h1>
-<p>Find me in app/views/businesses/show.html.erb</p>
-<p> <%= @user.username %></p>
+<div class="near-biz-container">
+	<p class="show-header">Near Me</p>
+	<hr class="hor-rule">
 
-<% @near_biz.each do |biz| %>
-<p><%= biz.business_name %></p>
-<% end %>
+	<% @near_biz.each do |biz| %>
+	<div class="individual-biz" data-id="<%= biz.id%>">
+
+			<hr class="hor-rule">
+		<div class="biz-avatar-container">
+			<img class="biz-avatar" src="<%= biz.avatar.url %>">
+		</div>
+			<div class="business-name"><%= biz.business_name %></div>
+			<div class="business-distance"><%= biz.distance.round(2) %> Miles Away</div>
+			<a class="business-url" href="<%= biz.url %>"> Click For Website</a>
+			<div class="tag-holder">
+			<% biz.tags.each do |tag| %>
+			
+			<span class="tag-name"><%= tag.tag_name %></span>
+			<% end %>
+			</div>
+
+			<hr class="hor-rule">
+	</div>
+		<% end %>
+
+</div>
