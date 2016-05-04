@@ -1,0 +1,41 @@
+<div class="biz biz-signup-form">
+  <p class="auth-header">New Businesses Sign Up Here</p>
+
+  <%= form_for @business, url: businesses_create_path, html: { method: :post } do |f| %>
+   <div>
+     <%= f.text_field :email, :type => 'email', :placeholder => "Email", :required => true, :class => 'input-field'  %>
+   </div>
+   <div>
+     <%= f.password_field :password, :placeholder => "Password", :required => true, :class => 'input-field'  %>
+   </div>
+   <div>
+     <%= f.text_field :business_name, :placeholder => "Business Name", :required => true, :class => 'input-field'  %>
+   </div>
+   <div>
+     <%= f.text_field :street_address, :placeholder => "Street Address", :required => true, :class => 'input-field'  %>
+   </div>
+   <div>
+     <%= f.text_field :city, :placeholder => "City", :required => true, :class => 'input-field'  %>
+   </div>
+   <div>
+     <%= f.text_field :state, :placeholder => "State", :required => true, :class => 'input-field'  %>
+   </div>
+   <div>
+     <%= f.text_field :zip_code, :placeholder => "Zip Code", :type => 'number', :required => true, :class => 'input-field'  %>
+   </div>
+   <div>
+     <%= f.text_field :url, :placeholder => "Website URL", :required => true, :class => 'input-field'  %>
+   </div>
+   <div>
+     <%= text_field_tag 'tags', nil, :placeholder => "Business Tags (3 Max)", :required => true, :class => 'input-field'  %>
+   </div>
+   <div>
+     <span class="auth-header">Upload Your Business Logo</span>
+     <%= f.file_field :avatar, :class => 'file-uploader' %>
+   </div>
+   <div>
+     <%= f.submit "Sign Up", :class => 'auth-button' %>
+   </div>
+    <% end %>
+
+ </div>
