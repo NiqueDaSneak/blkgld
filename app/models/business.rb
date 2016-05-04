@@ -8,6 +8,7 @@ class Business < ActiveRecord::Base
 	has_many :comments
 	has_many :favorites
 	has_many :ratings
+	has_many :tags
 
 
 	validates :business_name, presence: true, uniqueness: true

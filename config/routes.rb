@@ -50,6 +50,10 @@ Rails.application.routes.draw do
 
   get 'businesses/destroy'
 
+  get 'businesses/events', as: :events
+
+  get 'businesses/social', as: :social
+
   get 'logout' => 'sessions#logout', as: :logout
 
 
