@@ -15,21 +15,24 @@
 		<a href="<%= root_path %>">Home</a>
 		<% end %>
 
-		<% if user_logged_in? == true || business_logged_in? == true %>
+		<% if user_logged_in? == true %>
 		<a href="<%= businesses_show_path %>">Businesses</a>
 		<a href="<%= events_path %>">Events</a>
 		<a href="<%= social_path %>">Social Media</a>
 		<a href="<%= logout_path %>">Log Out</a>
 		<% end %>
+
+		<% if business_logged_in? == true %>
+		<a href="<%= logout_path %>">Log Out</a>
+		<% end %>
+
 	</nav>
 
 	<div class="buttonset">
 		<%= image_tag('hamburger.png', :class => "open-menu") %>
 		<%= image_tag('close-vector.png', :class => "close-menu") %>
-		<% if user_logged_in? %>	
-		<%= image_tag('search-vector.png', :class => "search-vector") %>
-		<% end %>
 	</div>
+
 	
 	<%= yield %>
 
