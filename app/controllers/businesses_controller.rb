@@ -47,7 +47,13 @@ class BusinessesController < ApplicationController
   def social
   end
 
-  def update
+   def update
+    # binding.pry
+        @business = Business.find_by(id: current_business.id)
+    if @business.update_attributes(business_params)
+      redirect_to businesses_profile_path, :flash => {:error => "Edit Successful"}
+    else redirect_to businesses_profile_path, :flash => {:error => "Edit UnSuccessful"}
+    end    
   end
 
   def destroy
