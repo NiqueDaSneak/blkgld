@@ -1,4 +1,12 @@
-<p> <%= @business.business_name %></p>
-<p><%= @business.url %></p>
-<a href="<%= logout_path %>">Logout</a>
-<img src="<%= @business.avatar %>">
+<div class="background-img">
+	<p class="top-padding">Here is how your buisness information will be displayed to users:</p>
+
+	<img class="logo" src="<%= @business.avatar %>">
+
+	<p class="profile-text">
+		<%= flash[:error] %>
+	</p> 
+
+	<%= render "biz_edit" %>
+
+</div>
