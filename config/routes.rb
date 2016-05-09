@@ -46,7 +46,7 @@ Rails.application.routes.draw do
 
   get 'businesses/edit'
 
-  get 'businesses/update'
+  put 'businesses/update'
 
   get 'businesses/destroy'
 
