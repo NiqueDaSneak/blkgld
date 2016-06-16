@@ -56,8 +56,10 @@ ActiveRecord::Schema.define(version: 20160426142928) do
   end
 
   create_table "tags", force: :cascade do |t|
-    t.integer "business_id"
-    t.string  "tag_name"
+    t.integer  "business_id"
+    t.string   "tag_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: :cascade do |t|
