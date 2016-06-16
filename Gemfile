@@ -3,6 +3,10 @@ source 'https://rubygems.org'
 # For Heroku
 gem 'rails_12factor', group: :production
 
+# For better errors
+gem 'sprockets_better_errors'
+
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use postgres as the database for Active Record
