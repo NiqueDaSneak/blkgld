@@ -90,3 +90,15 @@
 .timeline-Widget {
   padding-top: 70px;
 }
+
+/* Desktops and Laptops Styling*/
+@media only screen
+and (min-width : 780px) {
+
+  .near-biz-container {
+    background: image-url("pyramids.jpg");
+    background-repeat: no-repeat;
+    background-position: 63% 40%;
+    height: 100vh;
+  }
+}
