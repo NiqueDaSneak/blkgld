@@ -6,7 +6,7 @@
 }
 
 .background-img {
-	background: url("pyramids.jpg");
+	background: image-url("pyramids.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover; 
