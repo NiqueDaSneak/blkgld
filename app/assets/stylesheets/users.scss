@@ -4,7 +4,7 @@
 
 .forms-container {
 	/*padding-top: 20vh;*/
-  background: image-url("pyramids.jpg");
+  background: image-url("pyramids.png");
   background-repeat: no-repeat;
   background-size: cover; 
   background-position: 63% 40%;
@@ -84,7 +84,7 @@ input:focus {
 and (min-width : 780px) {
 
   .forms-container {
-    background: image-url("pyramids.jpg");
+    background: image-url("pyramids.png");
     background-repeat: no-repeat;
     background-position: 63% 40%;
     height: 100vh;

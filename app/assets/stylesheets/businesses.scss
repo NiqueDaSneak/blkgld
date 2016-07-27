@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .near-biz-container {
-  background: image-url("pyramids.jpg");
+  background: image-url("pyramids.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover; 
@@ -96,7 +96,7 @@
 and (min-width : 780px) {
 
   .near-biz-container {
-    background: image-url("pyramids.jpg");
+    background: image-url("pyramids.png");
     background-repeat: no-repeat;
     background-position: 63% 40%;
     height: 100vh;
